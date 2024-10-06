@@ -14,11 +14,12 @@ data "aws_ami" "amazon-linux" {
 
 resource "aws_instance" "dev_machine" {
   ami = data.aws_ami.amazon-linux.id
-  instance_type = "t2.micro"
-  key_name = "euran-jenkins"
+  instance_type = "t3.micro"
+  key_name = "hiba-jenkins"
 
   tags = {
     Environment = "dev"
     Name = "${var.name}-server"
   }
 }
+
