@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "euran-terraform-statefile"
+    bucket = "hiba-terraform-statefile"
     key = "server_name/statefile"
     region = "eu-north-1c"
   }
